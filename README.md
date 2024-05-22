@@ -1,38 +1,41 @@
-# Stage WordPress
-<!-- version: v1.0.4 -->
+# Stage WordPress@EPFL
+<!-- version: v1.1.1 -->
 ## À propos
 
-Cette fiche de stage s’intègre dans le catalogue de stage proposé aux 
+Cette fiche de stage s’intègre dans le catalogue de stage proposé aux
 apprenti·e·s et stagiaires à l’EPFL.
 
 
 | Nom                    | WordPress                                           |
 | ---------------------- | --------------------------------------------------- |
 | Type de stage          | Formation                                           |
-| Durée du stage         | 5 jours                                             |
+| Durée du stage         | 2 à 5 jours*                                        |
 | Unité                  | ISAS-FSD                                            |
-| Public                 | Tous (apprentis et stagiaire)                       |
+| Public                 | Tous (apprentis et stagiaires)                      |
 | Obligatoire            | Filière développement d’application                 |
 | Nombre de participants | 1                                                   |
 | Matériel               | Ordinateur portable                                 |
 | Prérequis              | Ligne de commande, serveurs Web, Linux un plus      |
 | Mots-clés              | WordPress, SSH, CLI, Linux, Apache, MariaDB, Docker |
 
+\* _La durée du stage peut varier en fonction des connaissances préalables du
+stagiaire et de la manière dont les différentes tâches sont approfondies._
+
 > **Note**
-> La dernière version de ce document est accessible via
-> <https://go.epfl.ch/stage-WP>. Accéder à sa version électronique
-> permet de suivre les liens. Vous pouvez également proposer des
-> [modifications](https://github.com/ponsfrilus/fiche-de-stage-WordPress/pulls)
-> ou laisser des
-> [commentaires](https://github.com/ponsfrilus/fiche-de-stage-WordPress/issues/new).
+> La version la plus récente de ce document est disponible sur
+> https://go.epfl.ch/stage-WP. Accéder à sa version électronique vous permettra
+> de suivre les liens, suggérer des [modifications] ou laisser des
+> [commentaires]. Vous pouvez également ajouter une ⭐ au repo pour faire
+> plaisir aux contributeurs :)
+
 
 ## Description du stage
 
 * Découvrir le CMS [WordPress] : installation, configuration, utilisation et
   développement ;
-* Apprendre comment déployer et mettre en poduction un site WordPress ;
+* Apprendre comment déployer et mettre en production un site WordPress ;
 * Mettre en place un kit de développement WordPress avec [Docker] ;
-* Observer et discuter de la pile technologique mise en place à l’EPFL pour les 
+* Observer et discuter de la pile technologique mise en place à l’EPFL pour les
   sites WordPress.
 
 
@@ -41,7 +44,7 @@ apprenti·e·s et stagiaires à l’EPFL.
 1. La personne en stage installe WordPress sur sa machine ;
 2. La personne en stage installe WordPress sur une machine virtuelle ;
 3. La personne en stage installe WordPress sur sa machine, avec Docker ;
-4. La personne en stage déploie le WordPress de sa machine sur la machine 
+4. La personne en stage déploie le WordPress de sa machine sur la machine
    virtuelle ;
 5. La personne en stage découvre comment WordPress est géré à l’EPFL.
 
@@ -53,8 +56,8 @@ noter votre progression, répondre à des questions puis obtenir la validation d
 formateur ou de la formatrice pour passer aux étapes suivantes.
 
 Commencez par créer un document qui vous permettra de prendre des notes et de
-répondre aux questions tout au long du stage. Le format du document est libre, 
-mais si vous êtes indécis, nous vous recommandons d’utiliser [Markdown], le 
+répondre aux questions tout au long du stage. Le format du document est libre,
+mais si vous êtes indécis, nous vous recommandons d’utiliser [Markdown], le
 format des fichiers README sur GitHub.
 
 > **Note**
@@ -72,12 +75,12 @@ Commencez par ajouter un paragraphe « Qu’est-ce que WordPress » dans votre
 document. Ce paragraphe doit contenir un peu d’historique (date de création,
 auteur, etc.). Répondez également aux questions : « WordPress est-il beaucoup
 utilisé ? », « Combien coûte WordPress ? » et « Quelle est la différence entre
-wordpress.com et wordpress.org » en développant vos réponses. 
+wordpress.com et wordpress.org » en développant vos réponses.
 
 - [ ] J’ai écrit le paragraphe « Qu’est-ce que WordPress »
 - [ ] J’ai répondu à la question « WordPress est-il beaucoup utilisé ? »
 - [ ] J’ai répondu à la question « Combien coûte WordPress ? »
-- [ ] J’ai répondu à la question « Quelle est la différence entre wordpress.com 
+- [ ] J’ai répondu à la question « Quelle est la différence entre wordpress.com
       et wordpress.org »
 - [ ] Je sais ce qu’est un CMS
 
@@ -91,7 +94,7 @@ Prenez des notes à chaque étapes pour expliquer comment vous avez fait tout en
 citant les références qui vous ont permis d’y arriver. Cette procédure doit être
 reproductible !
 
-Ajoutez la procédure d’installation à votre document et répondez à cette 
+Ajoutez la procédure d’installation à votre document et répondez à cette
 question : « De quoi WordPress a-t-il besoin pour fonctionner ? ».
 
 - [ ] J’explique comment je l’ai installé sur ma machine
@@ -100,13 +103,13 @@ question : « De quoi WordPress a-t-il besoin pour fonctionner ? ».
 
 ## Validation de la deuxième partie
 
-Avant d’aller plus loin, transmettez votre document à la personne encadrant le 
+Avant d’aller plus loin, transmettez votre document à la personne encadrant le
 stage et discutez de votre installation avec elle.
 
-- [ ] La procédure d’installation est validée par l’encadrant·e (vous lui 
-      expliquez la procédure et lui montrez votre site WordPress dans votre 
+- [ ] La procédure d’installation est validée par l’encadrant·e (vous lui
+      expliquez la procédure et lui montrez votre site WordPress dans votre
       navigateur)
-- [ ] Vous avez disctué avec l’encadrant·e des éléments dont WordPress avait 
+- [ ] Vous avez disctué avec l’encadrant·e des éléments dont WordPress avait
       besoin pour fonctionner
 - [ ] Vous êtes en mesure de dire ce que sont `LAMP`, `MAMP`, `WAMP` et `XAMP`
 
@@ -117,9 +120,9 @@ Le but de la troisième partie est de pouvoir installer **WordPress sur une
 machine distante** (aka le cloud) afin que le site que vous allez créer soit
 accessible au monde entier.
 
-Commencez par créer le paragraphe « Procédure d’installation de WordPress sur 
+Commencez par créer le paragraphe « Procédure d’installation de WordPress sur
 une VM distante » dans votre documentation. Cette procédure doit pouvoir être
-reproduite par une personne avec peu de connaissances en informatique, elle 
+reproduite par une personne avec peu de connaissances en informatique, elle
 doit donc être précise.
 
 Bien que certains hébergeurs proposent des installations automatisées et en
@@ -130,15 +133,15 @@ clé SSH. Si vous n’en avez pas, elle vous accompagnera pour en créer une. Le
 étapes de création de la VM et de la clé SSH ne sont pas à protocoler dans votre
 documentation.
 
-Lorsque vous êtes connecté sur l’invite de commande du serveur distant, 
-commencez à protocoler toutes les étapes nécessaires au bon déroulement de 
+Lorsque vous êtes connecté sur l’invite de commande du serveur distant,
+commencez à protocoler toutes les étapes nécessaires au bon déroulement de
 l’installation d’un site WordPress.
 
 Lorsque le site est fonctionnel, demandez-vous si la procédure que vous avez
 établie est reproductible. Est-ce qu’on peut tout effacer et reprendre votre
 procédure ?
 
-- [ ] J’ai écrit le paragraphe « Procédure d’installation de WordPress sur 
+- [ ] J’ai écrit le paragraphe « Procédure d’installation de WordPress sur
       une VM distante »
 - [ ] J’ai protocolé toutes les étapes nécessaires à l’installation de WordPress
 
@@ -157,8 +160,8 @@ entouré de son sciper (`123456EPFL123456`).
 
 ## À la découverte de WordPress
 
-Maintenant que vous avez un site WordPress accessible à distance, c’est le 
-moment de faire le **tour du propriétaire**. Commencez par créer des posts et 
+Maintenant que vous avez un site WordPress accessible à distance, c’est le
+moment de faire le **tour du propriétaire**. Commencez par créer des posts et
 des pages, en y incluant des médias.
 
 - [ ] Vous avez créé au moins 2 posts
@@ -176,9 +179,9 @@ Parcourez les différents menus de l’interface d’administration, puis demand
 - [ ] Vous savez comment assigner un menu à un emplacement du thème
 - [ ] Vous avez visité le menu `settings` (URL Rewriting, etc.)
 - [ ] Vous savez utiliser les catégories et les tags, ainsi que leurs pages
-- [ ] Vous savez ce qu’est le «SEO» et un «excerpt» 
+- [ ] Vous savez ce qu’est le «SEO» et un «excerpt»
 
-Prenez un peu de temps pour découvrir ces éléments : parcourrez le catalogue des 
+Prenez un peu de temps pour découvrir ces éléments : parcourrez le catalogue des
 thèmes et des plugins et installez-en quelques-un. Observez le comportement du
 site après chaque installation.
 
@@ -189,7 +192,7 @@ paragraphe doit contenir tout ce dont votre site pourrait avoir besoin pour
 fonctionner en production et être visité par un millier d’utilisateurs par jour.
 
 - [ ] J’ai ajouté une capture d’écran dans mon document
-- [ ] J’ai écrit le paragraphe « Que manque-t-il pour que mon site soit 
+- [ ] J’ai écrit le paragraphe « Que manque-t-il pour que mon site soit
       opérationnel ? »
 
 
@@ -197,7 +200,7 @@ fonctionner en production et être visité par un millier d’utilisateurs par j
 
 > **Note**
 > Cette partie couvre la partie développement de WordPress et peut
-> éventuellement être laissée de côté en fonction des intérêts de l’apprenti·e 
+> éventuellement être laissée de côté en fonction des intérêts de l’apprenti·e
 > ou du temps à disposition.
 
 Les développeurs WordPress (du CMS, de thèmes ou de plugins) doivent avoir un
@@ -216,7 +219,7 @@ individuellement.
 
 Même si vous avez déjà un peu d’expérience avec Docker, prenez un moment pour
 lire la page [wikipedia][Docker] et vous documenter. Si ce n’est pas déjà fait,
-installez-le sur votre machine . Ensuite, prenez une à deux heures pour essayer
+installez-le sur votre machine. Ensuite, prenez une à deux heures pour essayer
 de faire fonctionner WordPress avec Docker sur votre machine, puis demandez de
 l’aide à la personne responsable du stage.
 
@@ -227,12 +230,12 @@ Docker et plus précisément pour lancer WordPress dans un conteneur sur votre
 ordinateur.
 
 - [ ] Vous expliquez ce qu’est [Docker] dans votre document
-- [ ] Vous expliquez en quoi la conteneurisation est différente de la 
+- [ ] Vous expliquez en quoi la conteneurisation est différente de la
       virtualisation
-- [ ] Vous listez les commandes nécessaire à démarrer WordPress sur votre 
+- [ ] Vous listez les commandes nécessaire à démarrer WordPress sur votre
       ordinateur
 - [ ] Votre documentation contient un fichier `docker-compose.yml` fonctionnel
-- [ ] Vous êtes en mesure de comprendre la différence entre un Dockerfile, 
+- [ ] Vous êtes en mesure de comprendre la différence entre un Dockerfile,
       Docker et docker compose
 - [ ] Vous pouvez expliquer les ports, les volumes et les environnements dans
       le monde de Docker
@@ -252,9 +255,9 @@ servie par le conteneur.
 Vous devez également être en mesure de naviguer dans la base de données de
 WordPress depuis un client SQL de votre choix. Ajouter une capture d’écran du
 diagramme entité-association (« entity-relationship diagram », abrégé en ERD) de
-la base de données dans votre documentation. 
+la base de données dans votre documentation.
 
-- [ ] Vous avez ajouté un plugin dans un volume et pu le modifier depuis 
+- [ ] Vous avez ajouté un plugin dans un volume et pu le modifier depuis
       l’extérieur du conteneur
 - [ ] Vous avez pu connecter un client de base de données à votre conteneur pour
       ajouter une capture d’écran du diagramme entité-association de la DB.
@@ -276,8 +279,8 @@ le nécessaire pour **déployer en « prod »** vos modifications. Réutilisez
 la machine virtuelle de la deuxième partie (vous pouvez éventuellement la
 réinstaller) et installez-y Docker.
 
-Récupérez votre `docker-compose.yml` (idéalement à l’aide de la commande  
-`git clone https://github.com/vous/wp-dev-kit`) ainsi que le 
+Récupérez votre `docker-compose.yml` (idéalement à l’aide de la commande
+`git clone https://github.com/vous/wp-dev-kit`) ainsi que le
 code spécifique à vos développements.
 
 Avec des commandes similaires à celles que vous avez utilisées sur votre
@@ -286,37 +289,37 @@ ordinateur, démarrer votre « stack » WordPress sur le serveur. Documentez ces
 en prod est-il en tout point similaire à celui sur mon ordinateur ? ».
 
 - [ ] Vous documentez la procédure de déploiement en production
-- [ ] Vous répondez à la question « Mon déploiement en production est-il en tout 
+- [ ] Vous répondez à la question « Mon déploiement en production est-il en tout
       point similaire à celui sur mon ordinateur ? »
 
-Il est supposé à ce point que les quelques étapes pour déployer en production 
-ont été étonnamment faciles, est-ce bien le cas ? Si oui, cela a permis de 
+À ce point, il est supposé que les quelques étapes pour déployer en production
+ont été étonnamment faciles, est-ce bien le cas ? Si oui, cela a permis de
 démontrer un avantage de Docker : la portabilité.
 
 
 ## Est-on prêt pour la prod ?
 
-Votre documentation devrait avoir un paragraphe « Que manque-t-il pour que mon 
+Votre documentation devrait avoir un paragraphe « Que manque-t-il pour que mon
 site soit opérationnel ? », écrit lors de la troisième partie de ce stage.
 Discutez avec la personne responsable du stage de ce qu’il manque à votre site
 pour être utilisable, par exemple :
 
-* Est-ce que le site peut envoyer des emails, par exemple lorsqu’un 
+* Est-ce que le site peut envoyer des emails, par exemple lorsqu’un
   mot-de-passe est perdu ?
-* Est-ce que le site est sécurisé par HTTPS assurant que les informations 
+* Est-ce que le site est sécurisé par HTTPS assurant que les informations
   transitant entre le client et le serveur soient chiffrées ?
-* Est-ce que les informations importantes du site sont sauvegardées et 
+* Est-ce que les informations importantes du site sont sauvegardées et
   pourraient être utilisées dans un plan de reprise d’activité ([PRA]) ?
 * Qui pourra accéder à votre site ? Est-il nécessaire de mettre en place un
   système d’authentification basé sur celui de l’entreprise ?
 * ...
 
 En discutant avec l’encadrant·e, définissez ce qui doit être fait (par exemple
-la mise en place d’un certificat TLS/SSL avec [Let’s encrypt] et la 
+la mise en place d’un certificat TLS/SSL avec [Let’s encrypt] et la
 configuration d’une passerelle SMTP pour envoyer des e-mails).
 
 - [ ] Vous discutez avec l’encadrant·e de ce qui manque au site
-- [ ] Vous êtes capable de mettre en place un certificat ou du moins d’en 
+- [ ] Vous êtes capable de mettre en place un certificat ou du moins d’en
       expliquer les étapes
 - [ ] Vous êtes en mesure d’installer une passerelle SMTP
 - [ ] Vous savez ce qu’est un SSO
@@ -332,20 +335,21 @@ décrire la pile technologique utilisée pour le gérer.
 
 
 ## Historique
- 
+
 Le premier site Internet de l’École Polytechnique Fédérale de Lausanne a vu le
 jour en 1997 :  
-![Premier site Internet de l'EPFL, en 1997](./img/1997.png)
+![Premier site Internet de l’EPFL, en 1997](./img/1997.png)
 
-Tout au long des années et suivant l’évolution du Web, différentes versions ont
-vu le jour ([1998], [2004], [2007], [2010], [2014]) pour finalement utiliser
-WordPress de [2019] jusqu’à ce jour.
+Tout au long des années, suivant l’évolution du Web et faisant recours a
+divers systèmes de gestion de contenu[^2], différentes versions du site
+Internet de l’EPFL ont vu le jour ([1998], [2004], [2007], [2010], [2014]) pour
+finalement adopter WordPress en [2019].
 
 
 ## Volumétrie
 
 Lorsque quelqu’un navigue sur le site <https://www.epfl.ch>, il a l’impression
-de visiter un gros site Internet. Il s’avère qu’il s’agit en fait d’une 
+de visiter un gros site Internet. Il s’avère qu’il s’agit en fait d’une
 multitude de petits sites qui sont agrégés ensembles.
 
 - [ ] Posez-vous la question de combien de sites sont agrégés ensembles
@@ -361,8 +365,8 @@ par jour, combien de temps prendrait la mise à jour de la totalité de la flott
 ? Est-ce compatible avec le cycle de nouvelles version mentionné dans la page
 [How the Release Cycle Works] (tous les 4 mois) ?
 
-Nous aimons à penser que nous traitons les sites WordPress comme du bétail : 
-les sites sont mis à jour en masse et nous nous occupons individuellement des 
+Nous aimons à penser que nous traitons les sites WordPress comme du bétail :
+les sites sont mis à jour en masse et nous nous occupons individuellement des
 cas particuliers, au même titre qu’un agriculteur s’occupe d’une bête qui boîte
 dans son troupeau.
 
@@ -370,7 +374,7 @@ dans son troupeau.
 ## Pile technologique
 
 Vous êtes peut-être en train de vous demander quelle solution technologique vous
-metteriez en place si vous êtiez en charge du projet. Il y a assurément 
+metteriez en place si vous êtiez en charge du projet. Il y a assurément
 plusieurs solutions ! Les paragraphes suivants décrivent les solutions mises en
 place à l’EPFL.
 
@@ -411,66 +415,66 @@ de gérer la plateforme.
 
 Le logiciel utilisé s’appelle [Ansible]. Il est utilisé d’une manière qui permet
 de s’affranchir de la complexité du système : les apprentis sont par exemple en
-mesure de lancer les commandes de mise à jour de la totalité de la flotte en 
+mesure de lancer les commandes de mise à jour de la totalité de la flotte en
 production sans pour autant devoir comprendre tous les éléments.
 
 
 ### Secrets, DevOps et 12 facteurs
 
-Le partage des secrets permettant d’accéder aux différents éléments de la 
+Le partage des secrets permettant d’accéder aux différents éléments de la
 plateforme (aka « qui à le droit de péter la prod » !) est principalement fait
-avec l’outil [Keybase]. Parmi d’autres choses, Keybase offre un stockage 
-chiffré dans le cloud, Keybase File System. Les opérateurs, via le client 
+avec l’outil [Keybase]. Parmi d’autres choses, Keybase offre un stockage
+chiffré dans le cloud, Keybase File System. Les opérateurs, via le client
 Keybase, ont alors accès aux fichiers sur un point de montage de leur système.
 
-Les différents scripts ([Ansible]) peuvent alors utiliser le principe de 
+Les différents scripts ([Ansible]) peuvent alors utiliser le principe de
 « inclus ce fichier contenant les mot-de-passes si tu en as le droit, sinon
 tant pis pour toi », délégant le contrôle d’accès aux secrets à Keybase et à la
 personne y ayant accès.
 
 De manière plus générale, il est aussi intéressant de mentionner la méthodologie
 [DevOps] qui regroupe les pratiques techniques visant à l’unification du
-développement logiciel (dev) et de l’administration des infrastructures 
+développement logiciel (dev) et de l’administration des infrastructures
 informatiques (ops).
 
 En addition à la méthodologie [DevOps], la méthodologie des [12 facteurs] (« The
-Twelve-Factor App») est également appliquée.
+Twelve-Factor App ») est également appliquée.
 
 L’approche qui a été mise en place pour la création de la plateforme des sites
 WordPress de l’école se veut respectueuse de ces deux méthodologies.
 
 
-### Code Open Source
+### Code opensource
 
-Enfin et surtout, la totalité du code utilisée sur la plateforme WordPress de 
+Enfin et surtout, la totalité du code utilisée sur la plateforme WordPress de
 l’EPFL est disponible sur GitHub :
 
-* Le dépôt contenant le kit de développement : 
+* Le dépôt contenant le kit de développement :
   <https://github.com/epfl-si/wp-dev>
 * Le code Ansible pour le déploiement et le maintien de la plateforme :
   <https://github.com/epfl-si/wp-ops>
-* Le thème WordPress de l’EPFL, <https://github.com/epfl-si/wp-theme-2018>, 
-  utilisant la charte graphique disponible sur 
+* Le thème WordPress de l’EPFL, <https://github.com/epfl-si/wp-theme-2018>,
+  utilisant la charte graphique disponible sur
   <https://epfl-si.github.io/elements>
-* Les différents plugins, pouvant être listé en recherchant 
+* Les différents plugins, pouvant être listé en recherchant
   [`wp`](https://github.com/epfl-si?q=wp)
 
 
 ## Validation de la sixième partie
 
-Discutez de ce chapitre avec la personne encadrant le stage, si vous le 
+Discutez de ce chapitre avec la personne encadrant le stage, si vous le
 souhaitez il est peut être possible de participer au déploiement en production
 de nouvelles fonctionnalités sur la flotte des sites WordPress, voir même d’en
 être l’acteur.
 
-Pour cette partie vous êtes libre de décrire, dans le paragraphe 
-« WordPress@EPFL », ce que vous avez retenu et de développer les parties qui 
+Pour cette partie vous êtes libre de décrire, dans le paragraphe
+« WordPress@EPFL », ce que vous avez retenu et de développer les parties qui
 vous intéressent.
 
 - [ ] J’ai ajouté le paragraphe « WordPress@EPFL » dans mon document
-- [ ] L’encadrant·e du stage m’a montré différents éléments de la pile 
+- [ ] L’encadrant·e du stage m’a montré différents éléments de la pile
       technologique utilisée
-- [ ] J’ai discuté avec l’encadrant·e des différents aspects présents dans ce 
+- [ ] J’ai discuté avec l’encadrant·e des différents aspects présents dans ce
       chapitre
 
 
@@ -481,7 +485,7 @@ document**.
 
 Votre document doit mentionner 3 alternatives à WordPress ; si pour une
 raison quelconque l’utilisation de Wordpress n’est pas possible, quels CMS
-pourraient-on utiliser. Ou, en d’autres termes, quels sont les concurrents à
+pourraient-on utiliser ? Ou, en d’autres termes, quels sont les concurrents à
 WordPress ?
 
 Le fait que WordPress soit un logiciel libre et gratuit est intéressant. Qui
@@ -491,7 +495,7 @@ pas déjà traités.
 
 WordPress est très utilisé, pouvez-vous citez des sites connus qui l’utilise ?
 
-- [ ] J’ai mentionné 3 alternatives à WordPress dans mon document
+- [ ] J’ai mentionné au moins 3 alternatives à WordPress dans mon document
 - [ ] Je parle de la licence, de la gratuité et du modèle commercial
 - [ ] J’ai mentionné des sites connus qui l’utilise
 
@@ -499,11 +503,12 @@ WordPress est très utilisé, pouvez-vous citez des sites connus qui l’utilise
 ## Conclusion
 
 C’est le moment d’ajouter la conclusion à votre rapport. La conclusion doit
-traiter au moins des points suivants :
+traiter au moins des points suivants, permettant de faire une synthèse sur le
+tavail que vous avez fournit durant le stage :
 
  * Les avantages et inconvénients de WordPress ;
  * WordPress est-il un bon choix pour les sites de l’EPFL ;
- * Bilan du stage : ce que vous avez appris, ce que vous avez aimé, ce que vous 
+ * Bilan du stage : ce que vous avez appris, ce que vous avez aimé, ce que vous
    avez moins aimé.
 
 - [ ] J’ai ajouté le paragraphe « Avantages et inconvénients de WordPress »
@@ -514,28 +519,36 @@ traiter au moins des points suivants :
 
 # Envoi final
 
-Remplissez le rapport de stage (disponible sur le [site du canton de
-vaud](https://www.vd.ch/fileadmin/user_upload/themes/formation/orientation/fichiers_pdf/apprentissage/rapp_stage_stag.pdf)
-ou en [version web](https://azecko.github.io/rapport-de-stage/)) et sauvez le
-en PDF, avec comme nom `Stage_WP_ISAS-FSD_YYYY-MM_Évaluation_Prénom_Nom.pdf`.
-Relisez votre document pour vérifier l’orthographe, la
-mise en page, etc. puis générez un PDF, avec comme nom
+Relisez attentivement votre document pour vérifier l’orthographe, la mise en
+page, la qualité de vos procédure, etc. puis générez un PDF (par exemple en
+utilisant [Pandoc] si vous l'avez écrit au format [Markdown]), avec comme nom
 `Stage_WP_ISAS-FSD_YYYY-MM_Rapport_Prénom_Nom.pdf`.
 
+Avant de l’envoyer à personne encadrant votre stage et à vos formateurs et
+formatrices, renseignez-vous pour savoir s’il est nécessaire de remplir un
+rapport de stage. Le cas échéant, le rapport de stage est disponible sur le
+[site du canton de vaud](https://www.vd.ch/fileadmin/user_upload/themes/formation/orientation/fichiers_pdf/apprentissage/rapp_stage_stag.pdf) ou en [version web](https://azecko.github.io/rapport-de-stage/)).
+Une fois complété, sauvez-le en PDF, avec comme nom
+`Stage_WP_ISAS-FSD_YYYY-MM_Évaluation_Prénom_Nom.pdf`.
+
+Vous pouvez maintenant écrire le mail de fin de stage avec les documents
+adéquats en attachement. Pensez à communiquer les éventuels liens nécessaires
+pour accéder à votre document en ligne ou à votre dépôt Git.
+
 - [ ] J’ai remplis l’évaluation (rapport de stage) et j’en ai fait un PDF
-- [ ] J’ai créé un PDF basé sur ma documentation
-- [ ] J’ai envoyé par email, aux personnes responsables du stage et à mes 
-      formateur·trice·s, mes documents
+- [ ] J’ai créé un PDF basé sur ma documentation et l'ai nommé correctement
+- [ ] J’ai envoyé par email, aux personnes responsables du stage et à mes
+      formateur·trice·s, tous mes documents
+
 
 ---
 
 > **Note**
-> La dernière version de ce document est accessible via
-> <https://go.epfl.ch/stage-WP>. Accéder à sa version électronique
-> permet de suivre les liens. Vous pouvez également proposer des
-> [modifications](https://github.com/ponsfrilus/fiche-de-stage-WordPress/pulls)
-> ou laisser des
-> [commentaires](https://github.com/ponsfrilus/fiche-de-stage-WordPress/issues/new).
+> La version la plus récente de ce document est disponible sur
+> https://go.epfl.ch/stage-WP. Accéder à sa version électronique vous permettra
+> de suivre les liens, suggérer des [modifications] ou laisser des
+> [commentaires]. Vous pouvez également ajouter une ⭐ au repo pour faire
+> plaisir aux contributeurs :)
 
 <!-- Faire un test de controle de connaissances ? -->
 
@@ -546,7 +559,7 @@ mise en page, etc. puis générez un PDF, avec comme nom
 [Docker]: https://fr.wikipedia.org/wiki/Docker_(logiciel)
 [docker compose]: https://docs.docker.com/compose/
 [PRA]: https://fr.wikipedia.org/wiki/Plan_de_reprise_d%27activit%C3%A9
-[Let's encrypt]: https://letsencrypt.org/
+[Let’s encrypt]: https://letsencrypt.org/
 [How the Release Cycle Works]: https://make.wordpress.org/core/handbook/about/release-cycle/
 [What is Kubernetes]: https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/
 [Apache]: https://httpd.apache.org
@@ -561,6 +574,9 @@ mise en page, etc. puis générez un PDF, avec comme nom
 [Keybase]: https://fr.wikipedia.org/wiki/Keybase
 [DevOps]: https://fr.wikipedia.org/wiki/Devops
 [12 facteurs]: https://12factor.net/fr/
+[Pandoc]: https://pandoc.org
+[modifications]: https://github.com/ponsfrilus/fiche-de-stage-WordPress/pulls
+[commentaires]: https://github.com/ponsfrilus/fiche-de-stage-WordPress/issues/new
 
 [1998]: ./img/1998.png
 [2004]: ./img/2004.png
@@ -571,5 +587,7 @@ mise en page, etc. puis générez un PDF, avec comme nom
 
 [^1]: Par exemple en proposant <https://www.virtuozzo.com>,
       <https://www.plesk.com/> ou <https://cpanel.net/>
+[^2]: Dont Jahia (<https://www.jahia.com>)
+
 
 [//]: # `export VERSION=$(sed -n -e 's/<!-- version:\s\(.*\)\s-->/\1/p' README.md); pandoc README.md --pdf-engine=xelatex --variable urlcolor=cyan -V papersize:a4paper -V geometry:margin=2cm -o $(date +"%Y-%m-%d")_Stage_WordPress_ISAS-FSD_${VERSION}.pdf && xpdf $(date +"%Y-%m-%d")_Stage_WordPress_ISAS-FSD_${VERSION}.pdf`
