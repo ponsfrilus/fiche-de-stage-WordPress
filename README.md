@@ -109,7 +109,7 @@ stage et discutez de votre installation avec elle.
 - [ ] La procédure d’installation est validée par l’encadrant·e (vous lui
       expliquez la procédure et lui montrez votre site WordPress dans votre
       navigateur)
-- [ ] Vous avez disctué avec l’encadrant·e des éléments dont WordPress avait
+- [ ] Vous avez discuté avec l’encadrant·e des éléments dont WordPress avait
       besoin pour fonctionner
 - [ ] Vous êtes en mesure de dire ce que sont `LAMP`, `MAMP`, `WAMP` et `XAMP`
 
